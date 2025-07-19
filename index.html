@@ -3060,11 +3060,11 @@
           if (currentChar <= typingLines[0].length) {
             document.title = typingLines[0].slice(0, currentChar);
             currentChar++;
-            setTimeout(type, 200); // typing speed for letters
+            setTimeout(type, 100); // typing speed for letters
           } else {
             currentLine++;
             currentChar = 0;
-            setTimeout(type, 1000); // wait before next line
+            setTimeout(type, 600); // wait before next line
           }
         } else {
           // Display each phrase as whole
