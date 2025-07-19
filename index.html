@@ -2941,11 +2941,11 @@
 
 
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>s</title>
+  <title></title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=UnifrakturCook:wght@700&display=swap');
     body {
@@ -3039,6 +3039,17 @@
       margin-top: 2rem;
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fullText = "Normology - Forget the straights";
+      let index = 0;
+      setInterval(() => {
+        index++;
+        if (index > fullText.length) index = 0;
+        document.title = fullText.slice(0, index);
+      }, 200); // typing speed (ms per letter)
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -3056,7 +3067,6 @@
     <p>connect with homosexuals</p>
 
     <div class="links">
-      
       <a class="link-button" href="https://discord.gg/tFNB5GSfmc" target="_blank" rel="noopener noreferrer">‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎Discord‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎</a>
       <a class="link-button" href="https://en.wikipedia.org/wiki/Homosexuality" target="_blank" rel="noopener noreferrer">‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎transfer‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </a>
     </div>
