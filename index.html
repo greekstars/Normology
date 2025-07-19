@@ -3041,13 +3041,40 @@
   </style>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const fullText = "Normology";
-      let index = 0;
-      setInterval(() => {
-        index++;
-        if (index > fullText.length) index = 0;
-        document.title = fullText.slice(0, index);
-      }, 200); // typing speed (ms per letter)
+      const typingLines = [
+        "Normology",
+        "We",
+        "Are",
+        "Not",
+        "A",
+        "Cult",
+        "Yet",
+        "A",
+        "Religion"
+      ];
+      let currentLine = 0;
+      let currentChar = 0;
+      function type() {
+        if (currentLine === 0) {
+          // Typing "Normology" letter by letter
+          if (currentChar <= typingLines[0].length) {
+            document.title = typingLines[0].slice(0, currentChar);
+            currentChar++;
+            setTimeout(type, 200); // typing speed for letters
+          } else {
+            currentLine++;
+            currentChar = 0;
+            setTimeout(type, 1000); // wait before next line
+          }
+        } else {
+          // Display each phrase as whole
+          document.title = typingLines[currentLine];
+          currentLine++;
+          if (currentLine >= typingLines.length) currentLine = 0;
+          setTimeout(type, 1000); // show each phrase for 1 second
+        }
+      }
+      type();
     });
   </script>
 </head>
